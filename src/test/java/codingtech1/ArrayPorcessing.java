@@ -2,7 +2,7 @@ package codingtech1;
 
 import java.util.Arrays;
 
-public class arrayreview {
+public class ArrayPorcessing {
 	public static void main(String[] args) {
 		
 		double[] money =  { 10.9, 19.9, 88.9, 7.4 };  
