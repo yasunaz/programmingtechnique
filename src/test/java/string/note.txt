@@ -6,6 +6,48 @@ The string class stores a sequence of characters
 	* literals:  String address = "890 Mellody SE, Ashburn VA 201987";
 
 2.  Strings can be concatenated using + and += operators 
-
 3.  String object are immutable 
+
+	str.length();               // return number of characters in the string 
+	String.valueOf(input);      // it will turn the input into string representation 
+
+-----|creating a new string from old one 
+	str.replace();
+	str.replaceAll();
+	str.split();
+
+	"\\W"   extracts a word
+	"\\w"   extracts special character
+	"[0-9]" extracts numbers 
+
+	str.toUpperCase();
+	str.toLowerCase();
+
+====| extract substring
+	str.charAt(index);
+	str.substring();
+
+====| testing strings 
+	str.contains(input);
+	str.endsWith();
+	str.startsWith();
+	str.indexOf();
+	str.lastIndexOf();
+	
+====| comparison
+	str.comparTo();
+	str.compareToIgnoreCase();
+	str.isEmpty();
+	str.equals();
+	str.equalsIgnoreCase();
+
+
+
+
+
+
+
+	
+
+	
 
