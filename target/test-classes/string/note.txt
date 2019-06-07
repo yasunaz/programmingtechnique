@@ -1,0 +1,11 @@
+
+The string class stores a sequence of characters
+
+1. creating String object in two way 
+	* object  :  String name = new String("Hello how are you?');
+	* literals:  String address = "890 Mellody SE, Ashburn VA 201987";
+
+2.  Strings can be concatenated using + and += operators 
+
+3.  String object are immutable 
+

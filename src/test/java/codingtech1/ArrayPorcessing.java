@@ -51,7 +51,9 @@ public class ArrayPorcessing {
 
 		// Technique 6. reverse the values of array
 		int[] ages = { 10, 12, 14, 16, 20, 21, 25 };
-		int n = ages.length;
+		//         idx 0    1   2  [3]  4   5   6
+		
+		int n = ages.length;  
 		for (int i = 0; i < n / 2; i++) {
 			int temp = ages[i];
 			ages[i] = ages[n - 1 - i];
