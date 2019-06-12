@@ -41,6 +41,38 @@ The string class stores a sequence of characters
 	str.equals();
 	str.equalsIgnoreCase();
 
+char[]          <--- 1990s
+String          <--- 2000
+StringBuilder   <--- 2005
+
+
+primitive data tyeps:
+
+whole numbers:
+--------------
+byte
+short
+int
+long
+
+floating point numbers:
+----------------------
+float
+double
+
+
+character:
+----------
+char
+
+logics:
+------
+boolean
+
+
+
+
+
 
 
 

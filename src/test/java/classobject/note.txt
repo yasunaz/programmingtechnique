@@ -1,0 +1,60 @@
+
+
+
+char[]         -----> String ( immutable )
+Mutable String -----> StringBuilder
+
+Primitive Wrapper Classes
+--------------------------
+ * All wrapper class instance are immutable object 
+primitive      wrapper 
+---------      ----------
+int       ---> Integer   ( immutable )
+double    ---> Double    ( immutable )
+char      ---> Character ( immutable )
+boolean   ---> Boolean   ( immutable )
+
+Automatic Conversion:
+=====================
+Conversion Between Primitive data <-----> Wrapper 
+Integer a = 100;     prim    ---> wrapper 
+int b = a;           wrapper ---> prim
+Integer c = b;       prim    ---> wrapper
+
+
+Explicit Conversion: 
+===================
+* Wrapper class provide useful methods for 
+  explicit conversions   
+  primitive ---> wrapper ( boxing ) 
+  
+  String givenAge = "56";
+  Integer age   =   Integer.valueOf(givenAge);
+
+  wrapper   ---> prim   ( unboxing ) 
+  Integer.xxxValue();
+  
+  
+ Wrapper Class Equality 
+ =======================
+ don't use  === to check equlity 
+ Integer age = 10 * 10 * 10;
+ Integer num = 100 * 10;
+ 
+ if(age == num)        --> false, because they check if they are same object 
+ if( age.equals(num) ) --> true, they check the content 
+ 
+ 
+ 
+ Class:
+ Fields ( Properties ) --> Wrapper Class
+ Constructors
+ Methods
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

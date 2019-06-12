@@ -1,44 +1,42 @@
 package string;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class StringExplanation {
 
 	public static void main(String[] args) {
-		
-		//                 01234
-		
-		String apple = "Apple";
-		String grape = "apple";
-		
-		System.out.println(  apple.compareToIgnoreCase(grape)    );
-		// n1      n2
-		// a       a    = 0
-		// p       p    = 0
-		// p       p    = 0
-		// l       l    = 0
-		// a       g    = -6
-		
-		
-		//str1.comapreTo(  st2 ) ; 
-		
-		// negative ==> str1 comes first 
-		// 0        ==> if two string is identical 
-		// positive ==> str1 comes after 
+		// we dont like primitive data at all 
+		// 1. i cannot represent the absence of data 
+		// 
+		// Primitive Wrapper Class 
+		//--------------------------
+		// byte   --> Byte.java
+		// short ---> Short.java
+		// long  ---> Long.java 
+		// int   ---> Integer.java
+		//-------------------------
+		// float  ---> Float.java
+		// double ---> Double.java
+		//-------------------------
+		// boolean --> Boolean.java
+		// char    --> Character.java 
 		
 		
 		
+		Integer myage = 56;  ///   myage = new Integer(56);
+		
+		// someone created these representation 
+		// for themselves to make their programming simple and easy
+		
+		// String.java
+		// StringBuilder.java
+		// Integer.java
+		// Double.java
+		// Character.java
+		// Boolean.java
 		
 	}
 	
 	
-	static public String noWhiteSpace(String word) {
-		String[] words = word.split("\\W");
-		String result = "";
-		for(int i = 0; i < words.length; i++) {
-			result += words[i];
-		}
-		return result;
-	}
-
+	
 }

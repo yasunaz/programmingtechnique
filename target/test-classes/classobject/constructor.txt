@@ -1,0 +1,58 @@
+
+Class Initializers and Constructors
+====================================
+
+Class: we will use class to represent our own custom data type in java progarmming langauge
+
+We have to provide three parts:
+1. Fields
+2. Constructors
+3. Methods
+
+make use of class ===> We will create an object 
+
+When an object is created, it is expected to be in a useful state 
+- Often the default state is created by java if you do not provide initial state 
+
+* Java provides three way for establishing useful initial state
+ 1)  Field Initialization 
+ 2)  Initialization blocks
+ 3)  Constructor
+ 
+ Chaining constructors:
+ * Once constructor can call another constructor
+  - use this() followed by parameter list 
+  - usage of this() must the 1st line
+  
+  
+ Initialization and Construction Order:
+ ---------------------------------------
+ 1st:  Filed Initialization
+ 2nd:  Initialization Block 
+ 3rd:  Constructors  
+ 
+ 
+ Summary:
+ ==============
+ * Objects should be created in some useful state.
+ * Fields initializers provide an initial values as part of declaration.
+ * Every class has at least one constructor 
+ 	- if no construct : java will put default constructor 
+ 	- You can provide as many constructor as you want. 
+ * Once constructor can call another constructor 
+    - this( pram-list ),<--- it has to be the first line of code 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
