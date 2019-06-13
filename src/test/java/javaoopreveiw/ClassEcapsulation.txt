@@ -1,0 +1,185 @@
+Classes in Java 
+---------------
+* Java is object-oriented language
+* Object encapsulates 
+	1) data 
+	2) usage semantics 
+	3) operations 
+  -> allows storage and manipulation of data and it is hidden 
+  -> seperates "what" is to be done from "how" it is done
+
+
+* Class provides a structure for describing and creating this useful thing 
+  called object. 
+  "it is template for crating an object"
+
+  1. Create java document:   Flight.java 
+  2. Declare with class keyword followed by the class name 
+  3. Java source file name normally has same name as the class 
+
+
+  Anatomy of class: 
+   "A class is made up of both {state} and {executable code}"
+  	- Fields
+  		=> set of variables that stores state  
+  	- Constructors
+  		=> set of executable codes that is responsible for
+  		   creating an object and initializing first object state
+  	- Methods 
+  		=> set of executable codes that does 2 things
+  		i)  manipulates object's state
+  		ii) it perfomrs some operations
+
+int age = 28;
+Horse h1 = new Horse("Tom", 120);
+
+Using Classes: 
+* Use the "new" keyword to create a class instance ( object )
+	-> it creates in RAM the memory for the object  @ad783r[   h:{"Tom", 120 }]
+	-> it returns the addres of that memory space 
+* Class is a reference type. 
+
+
+Encapsulation and Acess Modifiers 
+-----------------------------------
+
+"The internal representation of an object is generally hidden"  <-- encapsulation 
+ Class Designers: 
+ 	They have to use access modifiers to achieve Encapsulation 
+
+ 	public       everywhere         
+ 	private      only within its own class 
+ 	default      only within the same package 
+ 	protected    
+
+
+
+1:  Methods Basics
+
+	"executable codes that manipulates state and performs operation"
+
+	return-type  method-name (typed-parameter-list) {
+		statements;
+	}
+
+	Name:  camelCaseNotation()
+	Return Type: 
+			void: does not return anything if you use this method
+			type: it will return this type when you use this method
+
+
+	void showSum(float x, float y, int count) {
+		float sum = x + y;
+		for(int = 0; i < count; i++) {
+			System.out.println(sum);
+		}
+
+	}
+
+	* Exiting from a method 
+	   1) the end of the method is reached
+	   2) a "return" statement is encountered
+	   		- primitive value
+	   		- a value of address to an object 
+	   		- empty
+	   3) an error occured 
+
+	   Unless there's an error, control returns to the right after the method call 
+
+
+3:  Special References: "this" & "null"
+    
+     "this":  it refers to current object 
+         -> to reduce ambiguity 
+         -> allows an object to pass itself as a parameter to a method 
+
+
+         public class HomePage {
+            // Property
+         	private WebDriver driver;
+
+         	@FindBy(id="btnlog")
+            private WebElement loginButtn;
+
+         	public HomePage(){
+         		// ocnstructore
+         	}
+
+         	public HomePage(WebDriver driver) {
+         		 this();
+         		 this.driver = driver;
+         		 dirver.get("https://www.trello.com/home");
+         		 PageFactory.initElement(this.driver, this);
+         	}
+
+         	public void sign() {
+         		// code
+         	}
+
+         }       	
+
+         this.driver;
+         this.loginButton;
+         this    <-------
+
+
+     "null" :  it refers to an uncreated object
+        -> it can be assigned to any reference variable 
+
+        Flight f1 = null;
+
+
+
+Field Encapsulation:
+	Rule:  a class' fields should not be directly accessible from 
+		   outside of the class 
+	why? 
+		-> helps to hide the data and its implementation details 
+		-> gives us a control to what the data can be set or displayed
+ 
+
+ 	Accessors and Mutators 
+
+ 	use the sccessor/mutator pattern to control field access:
+ 		Accessor: get the field value, also called getter
+ 			method name:  getFieldName();
+
+ 		Mutator: modifies the field value, also called setter
+ 			method name: setFieldName();
+
+Summary:
+	1. A class is a template for creating an object
+		- Declared with class keyword
+		- Class instance ( object ) is allocated with new keyword
+		  and created with constructor method
+
+		- Classes are Reference Types
+
+		- Use access modifiers to control user's object usage. ( Encapsulation )
+
+		- Methods maniplate state of an object and also performs operations
+
+		- Fields stores object state 
+			: interactions is controlled by 
+				accessors ( getters )
+				mutators  ( setters )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
