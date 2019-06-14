@@ -3,8 +3,8 @@ package classobject;
 public class Student {
 	// Field Initialization 
 	// Fields(Properties)
-	private String name;
-	private Character grade;
+	protected String name;
+	private Character grade = 'Y';
 	private Integer age ;
 	
 	{
@@ -19,12 +19,12 @@ public class Student {
 	public Student(String n, Integer a) {
 		this(a);
 		name = n;
-
+		grade = 'L';
 	}
 	
 	
 	// Methods 
-	public void displayObjectState() {
+	protected void displayObjectState() {
 		StringBuilder strb = new StringBuilder();
 		strb.append("====objetc state======\n")
 		    .append("names: "  + name + "\n")

@@ -1,0 +1,197 @@
+Quick Inheritance Review : 
+
+1. Car.java           created by Nijat  1996
+		drive();
+		refuel();  // gasoline
+		stop();
+		
+2. Toyata extends Car
+		navigate();
+		hybridMode();
+		seriousXMN();
+
+3. Tesla extends Car 
+		@Override
+		refuel(){
+			// how tesla refuels
+		}
+		
+		selfDrive();
+		collisionAvoidence();
+		
+		
+Inheritance: 
+	1. Implements DRY principle ( Don't Repeat Yourself ) 
+	2. Improves code Reusability
+	3. You can only inherit fields and methods that are { public, protected ) 
+		
+		
+Inheritance Detailed Explanation: 
+
+ "A class can be declared to inherit (derive) from another calss by 
+   using < extend > keyword."
+
+	Base Class                     Derived Class 
+	-----------                    -------------
+	Car.java  <----inherits------- Tesla.java
+	
+	* Derive class has:
+		- derived class has characteristics ( fields, methods with public & protected ) of base class
+		- derived class can add its own methods or fields ( specialization ) 
+		- derived class' object can be assigned to variable of type base class. 
+					Car mycar = new Tesla();
+		- derived class' fields hide base class fields with same name.
+		- derived class' methods override base class methods with same signature. 
+		
+		
+		Car Methods			Tesla Methods 
+		===========			=============
+		driver();			drive();
+		refule();			@Override refule();
+		stop();				stop();
+							selfDrive();
+							collisionAvoidence();
+	
+	Quiz: 
+		Car     mycar = new Tesla();   
+		Tesla mytesla = new Tesla();   
+		
+		// if you create a child class object and refer to it
+		// through variable of tye parent, then only mutual methods 
+		// between parent and child class can be invoked. 
+		mycar.drive();
+		mycar.refule(); <-- tesla's refule methods
+		mycar.stop();
+		
+		// if you create a child class object and refer to it
+		// through a variable of its own type, then of course
+		// you can invoke all of its exposed methods 
+		mytesla.drive();
+		mytesla.refule();
+		mytesla.stop();
+		mytesla.selfDrive();
+		mytesla.collisionAvoidence();
+	 
+
+	super:   
+		Similiar to "this", super is an implicit reference
+		to the current object. 
+		
+		- super treats the object as if it is an 
+		  instance of its base class. 
+		
+		- useful for accessing base class members 
+		  that have been overridden  
+
+
+ Controlling Inheritance and Overriding:
+ =========================================
+ 
+ Prevention: 
+  - By default all classes can be extended and derived classes 
+    have an option to use or override inherited methods.
+   
+  - However, java offers restrictions to these capabilities ( inheritance, overriding ) 
+  
+  
+  Java achieve this restriction by using "final" label:
+  	- to prevent inheriting, label your class as final class 
+  	- to prevent overriding of your methods, label your methods as final.
+  	
+  
+  
+ Enforcing:
+ 	- java allows inheritance and overriding enforcement with "abstract" label
+ 	- to enforce the inheritance, label your class as abstract class
+ 		 if the class is an abstract class, then you cannot create a object 
+ 		 of this class 
+ 		 
+ 		 Shape shape = new Shape();  // <---- not allowed
+ 		 
+ 		 this abstract class ( Shape.java ) is not to be used as stand alone, 
+ 		 it is only there to be used as a parent class. 
+ 		 
+ 	- to enforce the overriding, lable your class as abstract method 
+ 		 If you label any method inside of one class as "abstract" 
+ 		 then you cannot provided its method body codes, and also 
+ 		 containing class must be labeld as abstract as well. 
+ 		 
+ 
+  
+
+Inheritance and Constructors: 
+==============================
+- Constructor are not inherited 
+
+- A base class ( parent class ) constructor must always be called in the first line 
+  of derived class' constructor. 
+  
+- by default, base class' no-argument constructor ( default constructor ) 
+  is called behind the scene.
+
+- you can explicitly call a base class constructor using "super" 
+  followed by its parameter list and it has to be first line of constructor
+  inside of child constructor. 
+
+
+
+
+Summary: 
+=================
+
+* Inheritance allows a new class to be defined with characteristics of another class.
+	- use the "extends" keyword 
+
+* Derived class (child) have an option of override the base class' methods 
+	- use @Override annotation 
+
+* Derived field can be overridden but can only be used for its own object referred by its 
+  own type of variable. 
+ 
+* All class derive from Object class. 
+
+* super keyword accesses current object as if instance of its parent object 
+
+* this keyword accesses current object 
+
+* final and abstract keyword provides control over class inheritance and method overriding
+	 final:    prevention 
+	 abstract: enforcing 
+
+* constructor is not inherited, so if you inherit, you must explicitly call 
+  base class' constructor in the first line of the derived class' constructor
+  
+  // child constuctor 
+  public Child(param-child_list ) {
+  		super(param-list, param-child-list);
+  		...
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
