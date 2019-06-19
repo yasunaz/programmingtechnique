@@ -1,0 +1,38 @@
+Creating Abstract Relationships with Interface:
+-----------------------------------------------
+menu:
+	1. What an interface is
+	2. Implementing an interface
+	3. Implementing multiple interfaces
+	4. Declaring an interface 
+	
+$ What an interface is: 
+  - "an interface defines a contract"
+ (defines) [Entity 1] <--------> [Entity 2] (Implements)
+            interface			  class
+            
+      - Class implements interface, 
+      - class conforms to the contract
+    
+    * interface do not limit other aspects of the class' implements 
+    * Classes are freee to implement as many interface as they wish. 
+    
+$ Declaring an interface
+	1. It is similar to declaring a class, you have to use
+	   "interface" keyword
+	2. Thing that you can list out in interface
+		- methods:  it is always  "public"
+		- constant: it is always  "public final static"
+	3. Interface can extend other interface 
+
+
+Interface Summary: 
+==================
+* An interface defines a contract 
+	- provide no implementations, they just ask the methods 
+	- can include methods ( public ) and constants ( static public final ) 
+* Classes implements interface 
+	- classes are able to implement multiple interfaces 
+* Interfaces are able to extend other interface
+	- implementing an extended interface implicitly implements the base
+	

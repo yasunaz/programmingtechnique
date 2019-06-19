@@ -1,0 +1,61 @@
+
+Error Handling with Exceptions 
+------------------------------
+try/catch/finally blocks 
+
+try:
+	the try block contains the "normal" code that needs to executes
+
+catch: 
+	the catch block contains the code that handles the error if happens 
+	
+finally:
+	the finally block contains cleanup code that will be executed no matter what
+	
+	
+	try{
+		// try-block
+		// test data from the db
+		// open connection to db
+	}
+	catch(Exception e) {
+		// catch-block
+	}
+	finally{
+		// close the db connection
+	}
+	
+
+
+Exception: it is a way of java to signal the error has happend. Detecting what kind of 
+      error has happened is depend on the user's representaion. 
+      
+     
+     Throwable   
+     ==========
+     	|-->  Exception
+     				|---> RuntimeException ( ArithmeticException, NullPointerException, ArrayIndexOutOfBoundException ..etc ) 
+     					  These are unchecked exceptions 
+     				
+     				|---> IOException, InterruptedException
+     					  There are checked exceptions, programmer will label their methods as Throws Exceptions 
+     					  So you are forced to enclose thier code in try..catch block. 
+      
+
+Exceptions can be handled by type 
+	- Each exception type can have a seperate catch block 
+	- Each catch is tested in order from top to bottom 
+	- First assignable catch is selected
+	- Start catch blocks with most specific exception types 
+
+
+
+
+
+
+
+
+
+
+
+
